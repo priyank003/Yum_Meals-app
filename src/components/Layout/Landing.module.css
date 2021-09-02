@@ -1,0 +1,262 @@
+.landing {
+  display: flex;
+  height: 100vh;
+}
+.landing-left {
+  margin-top: 4rem;
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.landing-caption {
+  background: #fdecec;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 25px;
+  padding: 10px;
+  color: #f54748;
+}
+.landing-caption img {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+.landing-heading {
+  padding-top: 20px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.landing-heading h1 {
+  width: fit-content;
+  font-family: "Poppins", sans-serif;
+  font-size: 5rem;
+
+  margin: 0;
+  line-height: 5.5rem;
+}
+.landing-heading span {
+  color: #f54748;
+}
+.landing-heading p {
+  color: rgb(59, 57, 57);
+  padding: 5px;
+  text-align: start;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-weight: 450;
+}
+.landing-btns button {
+  width: 150px;
+  font-size: 1.2rem;
+  padding: 15px 5px 15px;
+}
+.landing-right {
+  font-family: "Poppins", sans-serif;
+  flex: 0.5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-wrap {
+  margin-top: 8rem;
+  border: 1px solid red;
+  position: relative;
+  background: red;
+  height: 420px;
+  width: 400px;
+  /* border-radius: 50%; */
+  border-radius: 10% 30% 50% 70%;
+}
+
+.girlImg {
+  width: 400px;
+  margin-top: -6rem;
+  border-radius: 0 0 20% 0;
+}
+.clockImg {
+  top: -8rem;
+  left: -8rem;
+  position: absolute;
+  width: 100px;
+}
+.arrowImg {
+  position: absolute;
+  top: -4rem;
+  right: -6rem;
+  width: 100px;
+  transform: rotate(10deg);
+  z-index: -10;
+  position: absolute;
+}
+.flameImg {
+  position: absolute;
+  top: 7rem;
+  left: -5rem;
+  width: 40px;
+  transform: rotate(10deg);
+  z-index: 1000;
+}
+.hero-customer {
+  position: absolute;
+  /* top: 14rem;
+  left: -15rem; */
+  top: 26rem;
+  left: -6rem;
+
+  background: white;
+  padding: 8px 10px 8px;
+  border-radius: 50px;
+  display: flex;
+
+  height: 3.5rem;
+  align-items: center;
+  width: fit-content;
+  box-shadow: 0 0 25px #d2cdcd;
+}
+.customer-Img {
+  background: #ffeecc;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+.customer-Img img {
+  width: 40px;
+}
+.customer-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 10px;
+}
+.customer-name h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+.customer-name span {
+  color: rgb(61, 60, 60);
+}
+
+.customer-call {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.customer-call img {
+  width: 30px;
+}
+.hero-product {
+  position: absolute;
+  top: 13rem;
+  right: -12rem;
+  display: flex;
+  background: white;
+  box-shadow: -10px 0 25px #c0b1b1;
+  width: fit-content;
+  padding: 12px;
+  border-radius: 15px;
+}
+.hero-product img {
+  border-radius: 15px;
+  width: 80px;
+}
+.product-info {
+  font-weight: 800;
+
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.product-info span {
+  font-weight: 2000;
+  font-size: 1.3rem;
+}
+
+.product-price span {
+  font-size: 0.7rem;
+  color: #f54748;
+}
+
+/* .hero-wrap::after {
+  content: "";
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  box-sizing: border-box;
+  box-shadow: 0 60px 0 white;
+  border-radius: 50%;
+  background-size: 500px;
+} */
+
+/* .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.box {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  background: #fff;
+  overflow: hidden;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background: transparent;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 100px 0 40px #fff;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  border: 6px solid transparent;
+
+  border-radius: 50%;
+}
+.box .circle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background: #ffff5c;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.box .circle img,
+.box img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: 450px;
+} */
