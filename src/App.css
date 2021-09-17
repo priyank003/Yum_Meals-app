@@ -38,3 +38,14 @@
     transform: rotate(360deg);
   }
 }
+@media (max-width: 450px) {
+  .App {
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+}

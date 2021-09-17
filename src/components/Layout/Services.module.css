@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.services {
+  position: relative;
+  height: 85vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-heading {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.services-Icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+.services-Icons img {
+  height: 10rem;
+}
+
+.services-Icons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-Icons p {
+  padding: 10px;
+  color: rgb(59, 57, 57);
+}
+.services-Icons h3 {
+  font-size: 1.6rem;
+}
+.services-info button {
+  display: none;
+}
+.squareSvg {
+  position: absolute;
+  top: 0;
+  left: 15rem;
+  width: 18px;
+}
+.circleSvg {
+  position: absolute;
+  width: 15px;
+  left: 75rem;
+  top: 0;
+}
+@media (max-width: 450px) {
+  .squareSvg,
+  .circleSvg {
+    display: none;
+  }
+  .services-heading {
+    display: none;
+  }
+  .services {
+    margin: 5px;
+    margin-top: 5rem;
+    padding: 0;
+    height: 25vh;
+    /* box-shadow: 0 2px 20px rgb(194, 185, 185); */
+    background-image: linear-gradient(
+        to bottom,
+        rgba(245, 246, 252, 0.52),
+        rgba(240, 194, 151, 0.73)
+      ),
+      url("../../assets/Food_Pattern_5_01\ [Converted].png");
+    /* background-image: url("../../assets/Food_Pattern_5_01\ [Converted].png"); */
+    background-repeat: repeat;
+    background-size: contain;
+    border-radius: 25px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .services::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-Icons {
+    display: flex;
+    align-items: baseline;
+    width: fit-content;
+
+    margin: auto;
+    overflow: auto;
+    white-space: normal;
+  }
+  .services-Icons .feature {
+    width: 400px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row-reverse;
+  }
+  .services-Icons .services-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .services-info h3 {
+    margin: 0;
+    font-weight: 600;
+  }
+  .services-info h3 span {
+    color: #f54748;
+  }
+  .services-info p {
+    display: none;
+  }
+  .icon-div img {
+    width: 70%;
+  }
+  .services-info button {
+    display: block;
+    padding: 10px 5px 10px;
+  }
+  .services-info button:focus {
+    outline: none;
+  }
+}

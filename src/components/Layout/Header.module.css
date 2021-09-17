@@ -6,6 +6,13 @@
   height: 5rem;
   font-family: "Poppins", sans-serif;
 }
+.hamMenu {
+  display: none;
+}
+
+.brand h1 span {
+  color: #f54748;
+}
 .links a {
   text-decoration: none;
   margin-left: 2rem;
@@ -22,4 +29,60 @@
 }
 .icons button {
   margin-left: 1.5rem;
+}
+
+.header-cart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.cart-count {
+  position: absolute;
+  top: 5px;
+  left: 40px;
+  background: #f54748;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-count span {
+  color: white;
+  font-size: 0.8rem;
+}
+@media (max-width: 450px) {
+  .hamMenu {
+    display: flex;
+    align-items: center;
+  }
+  .brand img {
+    width: 20px;
+  }
+  .links {
+    display: none;
+  }
+  .header {
+    height: 4rem;
+    width: 100%;
+    align-self: center;
+    background: white;
+    justify-content: space-around;
+  }
+
+  .login {
+    display: none;
+  }
+  .icons button {
+    display: none;
+  }
+  .brand h1 {
+    font-size: 2rem;
+  }
+  .cart-count {
+    top: -4px;
+  }
 }

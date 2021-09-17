@@ -1,6 +1,7 @@
 import classes from "./Landing.module.css";
+import Name from "../UI/Name";
 import chef from "./../../assets/ready_food.svg";
-import { Colors } from "../UI/Colors";
+
 import Button from "../UI/Button";
 import girl from "../../assets/girl_eating_pizza.svg";
 import clock from "../../assets/clock.svg";
@@ -24,10 +25,9 @@ const Landing = () => {
           <h1>
             Your <span>Food</span>{" "}
           </h1>
-
           <p>
-            Our Job is to filling your tummy with delicious food <br /> and with
-            fast and free delivery
+            Our Job is to filling your tummy with delicious food and with fast
+            and free delivery
           </p>
         </div>
         <div className={classes["landing-btns"]}>
@@ -39,16 +39,16 @@ const Landing = () => {
       <div className={classes["landing-right"]}>
         <div className={classes["hero-wrap"]}>
           {" "}
-          <img src={girl} className={classes.girlImg}></img>
-          <img src={clock} className={classes.clockImg}></img>
-          <img src={arrow} className={classes.arrowImg}></img>
-          <img src={flame} className={classes.flameImg} />
+          <img src={girl} className={classes.girlImg} alt=""></img>
+          <img src={clock} className={classes.clockImg} alt=""></img>
+          <img src={arrow} className={classes.arrowImg} alt=""></img>
+          <img src={flame} className={classes.flameImg} alt="" />
           <div className={classes["hero-customer"]}>
             <div className={classes["customer-Img"]}>
               <img src={boy} alt="" />
             </div>
             <div className={classes["customer-name"]}>
-              <h3>Richard Watson</h3>
+              <Name>Richard Watson</Name>
               <span>Food courier</span>
             </div>
             <div className={classes["customer-call"]}>
@@ -58,10 +58,10 @@ const Landing = () => {
           <div className={classes["hero-product"]}>
             <img src={pizza} alt="" />
             <div className={classes["product-info"]}>
-              <span>Italian Pizza</span>
+              <Name>Italian Pizza</Name>
               <div className={classes["product-price"]}>
                 <span>$</span>
-                <p1>7.49</p1>
+                <Name>7.49</Name>
               </div>
             </div>
           </div>
@@ -71,13 +71,3 @@ const Landing = () => {
   );
 };
 export default Landing;
-{
-  /* <div className={classes.container}>
-          <div className={classes.box}>
-            <div className={classes.circle}>
-              <img src={girl} alt="" />
-            </div>
-            <img src={girl} alt="" />
-          </div>
-        </div> */
-}

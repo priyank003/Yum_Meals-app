@@ -1,23 +1,52 @@
 import classes from "./Header.module.css";
-import SearchIcon from "./../../assets/search_black_24dp.svg";
-import cart from "./../../assets/shopping_cart_black_24dp.svg";
+import SearchIcon from "./../../assets/UI/search_black_24dp.svg";
+import cart from "./../../assets/UI/shopping_cart_black_24dp.svg";
 import Button from "../UI/Button";
+import hamMenu from "../../assets/UI/menu_black_24dp.svg";
+import React, { useState } from "react";
+import Cart from "../Cart/Cart";
 
-const Header = () => {
+const Header = (props) => {
+  const [sideNav, setsideNav] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+  const clickHandler = () => {
+    setsideNav((prev) => !prev);
+
+    props.hamClick(sideNav);
+  };
+
+  const cartHandler = () => {
+    if (!showCart) setShowCart(true);
+    else setShowCart(false);
+    props.cartClick(showCart);
+  };
+
   return (
     <div className={classes.header}>
+      {console.log(showCart)}
+      <div className={classes.hamMenu} onClick={clickHandler}>
+        <img src={hamMenu} alt="" />
+      </div>
       <div className={classes.brand}>
-        <h1> Yum Meals</h1>
+        <h1>
+          {" "}
+          Yum <span>Meals</span>
+        </h1>
       </div>
       <div className={classes.links}>
-        <a href="">Why Yum Meals ?</a>
-        <a href="">Services</a>
-        <a href="">Menu</a>
-        <a href="">Contact</a>
+        <a href="/why">Why Yum Meals ?</a>
+        <a href="/services">Services</a>
+        <a href="/menu">Menu</a>
+        <a href="/contact">Contact</a>
       </div>
       <div className={classes.icons}>
-        <img src={SearchIcon} alt="" />
-        <img src={cart} alt="" />
+        <img src={SearchIcon} className={classes.searchIcon} alt="" />
+        <div className={classes["header-cart"]} onClick={cartHandler}>
+          <div className={classes["cart-count"]}>
+            <span>3</span>
+          </div>
+          <img src={cart} alt="" onClick={cartHandler} />
+        </div>
         <Button>Login</Button>
       </div>
     </div>

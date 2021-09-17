@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap");
+.menu {
+  margin: auto;
+
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+  margin-top: 5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.menu-title {
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #f54748;
+}
+.menu-heading h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  width: fit-content;
+  padding: 0;
+  line-height: 2rem;
+}
+.link-icon {
+  width: 50px;
+}
+.menu-nav {
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+}
+.menu-left {
+  margin-left: 2rem;
+  flex: 0.3;
+
+  height: 50vh;
+  overflow-y: scroll;
+}
+.menu-link {
+  margin-top: 15px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 35px;
+  display: flex;
+  color: black;
+  cursor: pointer;
+
+  align-items: center;
+}
+.menu-link:hover {
+  background: red;
+  color: white;
+}
+.menu-link span {
+  margin-left: 10px;
+}
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.link-icon img {
+  width: 30px;
+}
+.menu-right {
+  flex: 0.75;
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+  height: 50vh;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu-meals {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.meal-overlay {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+
+  background: rgb(63, 65, 66);
+  background: linear-gradient(
+    184deg,
+    rgba(63, 65, 66, 0) 0%,
+    rgba(20, 21, 57, 0.6169818269104517) 100%
+  );
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.menu-meals img {
+  border-radius: 20px;
+  height: 100%;
+  /* width: 350px; */
+}
+.meal-info {
+  color: rgba(255, 255, 255, 0.863);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.meal-form {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.meal-order {
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.meal-order span {
+  font-weight: 500;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap");
+.meal-info h3 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.meal-price span {
+  color: #fdc55e;
+}
+.meal-price h2 {
+  display: inline;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(235, 226, 226);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #f54748;
+  border-radius: 10px;
+}
+.squareSvg {
+  position: absolute;
+  top: -8rem;
+  left: 35rem;
+  width: 18px;
+}
+.circleSvg {
+  position: absolute;
+  width: 15px;
+  left: 55rem;
+  top: -15rem;
+}
+
+@media (max-width: 450px) {
+  .menu {
+    height: fit-content;
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .menu-heading {
+    display: none;
+  }
+  .menu-nav {
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+  }
+  .menu-left {
+    margin: 0;
+    width: 100%;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+
+    height: fit-content;
+  }
+  .menu-left::-webkit-scrollbar {
+    display: none;
+  }
+  .menu-link {
+    background: #f7f7f7;
+    margin: 0;
+    margin-right: 20px;
+    width: 250px;
+    padding: 10px 10px;
+  }
+  .menu-link span {
+    margin-right: 10px;
+  }
+  .menu-link:focus {
+    outline: none;
+  }
+  .link-icon:focus {
+    outline: none;
+  }
+  .menu-right {
+    height: 35vh;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .menu-meals {
+    height: 30vh;
+    width: fit-content;
+  }
+  .menu-right::-webkit-scrollbar {
+    display: none;
+  }
+  .menu-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .menu-title {
+    margin-left: 15px;
+  }
+  .meal-info h3 {
+    font-size: 1.5rem;
+  }
+  .meal-price h2 {
+    font-size: 1.4rem;
+  }
+}

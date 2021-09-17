@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.review {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+}
+.review-right {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.review-right {
+  flex: 0.5;
+}
+.review-heading {
+  text-align: start;
+  font-size: 3.5rem;
+}
+.customer-review p {
+  font-weight: 600;
+  color: rgb(92, 90, 90);
+  text-align: start;
+  font-size: 1.2rem;
+}
+.customer-tab {
+  display: flex;
+
+  margin-top: 2rem;
+}
+.review-para {
+  margin-bottom: 2rem;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 15px;
+}
+.customer-info span {
+  color: rgb(66, 63, 63);
+}
+.review-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.5;
+}
+
+.chef-wrap {
+  margin-top: 6rem;
+  position: relative;
+  background: #f54748;
+  height: 350px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25% 55% 10% 25%;
+}
+.chefImg {
+  width: 800px;
+  position: absolute;
+  top: -10rem;
+  left: -13.5rem;
+}
+.chef-wrap::after {
+  z-index: 100;
+  position: absolute;
+  content: "";
+  width: 400px;
+  background: white;
+  height: 50px;
+  top: 350px;
+}
+.our-reviewer {
+  background: white;
+  box-shadow: 0 0 25px #d2cdcd;
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+  top: 20rem;
+  left: 20rem;
+  z-index: 100;
+  border-radius: 25px;
+}
+.our-reviewer h3 {
+  color: rgb(83, 80, 80);
+}
+.reviewer-icons {
+  width: 10px;
+  margin-top: 10px;
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: 450px) {
+  .review {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chef-wrap {
+    transform: scale(0.7);
+    padding: none;
+  }
+  .review-heading {
+    margin: 0;
+    width: auto;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 3.2rem;
+  }
+  .review-left {
+    height: fit-content;
+  }
+  .review-right {
+    align-items: center;
+  }
+  .customer-review p {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 10px 5px 10px;
+  }
+  .customer-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .customer-tab {
+    margin-top: 0;
+    align-self: center;
+  }
+  .chefImg {
+    transform: scale(0.8);
+    top: -8rem;
+  }
+  .customer-tab div {
+    align-self: center;
+  }
+}
