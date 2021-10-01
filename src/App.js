@@ -8,6 +8,8 @@ import Footer from "./components/Layout/Footer";
 import SideNav from "./components/SideNav/SideNav";
 import { useState } from "react";
 import Cart from "./components/Cart/Cart";
+import { Switch, Route } from "react-router";
+
 import img from "./assets/menu/burger/beef-cotlet-burger-with-sauce-wooden-board.jpg";
 function App() {
   const [nav, setNav] = useState(null);
@@ -46,17 +48,20 @@ function App() {
         onClick={hideHandler}
         cartClick={cartHandler}
       />
-      {cart ? (
-        <Cart cartItem={cartItem} />
-      ) : (
-        <div onClick={hideHandler}>
+      <Switch>
+        <Route path="/cart">
+          <Cart cartItem={cartItem} />
+        </Route>
+        <Route path="/menu">
+          <Menu cartItem={addcartItems} />
+        </Route>
+        <Route path="/">
           <Landing />
           <Services />
-          <Menu cartItem={addcartItems} />
           <Review />
-          <Footer />
-        </div>
-      )}
+        </Route>
+      </Switch>
+      <Footer />
     </div>
   );
 }
