@@ -5,6 +5,7 @@ import Button from "../UI/Button";
 import hamMenu from "../../assets/UI/menu_black_24dp.svg";
 import React, { useState } from "react";
 import Cart from "../Cart/Cart";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   const [sideNav, setsideNav] = useState(false);
@@ -27,12 +28,14 @@ const Header = (props) => {
       <div className={classes.hamMenu} onClick={clickHandler}>
         <img src={hamMenu} alt="" />
       </div>
-      <div className={classes.brand}>
-        <h1>
-          {" "}
-          Yum <span>Meals</span>
-        </h1>
-      </div>
+      <Link to="/">
+        <div className={classes.brand}>
+          <h1>
+            {" "}
+            Yum <span>Meals</span>
+          </h1>
+        </div>
+      </Link>
       <div className={classes.links}>
         <a href="/why">Why Yum Meals ?</a>
         <a href="/services">Services</a>
@@ -41,12 +44,15 @@ const Header = (props) => {
       </div>
       <div className={classes.icons}>
         <img src={SearchIcon} className={classes.searchIcon} alt="" />
-        <div className={classes["header-cart"]} onClick={cartHandler}>
-          <div className={classes["cart-count"]}>
-            <span>3</span>
+        <Link to="/cart">
+          <div className={classes["header-cart"]} onClick={cartHandler}>
+            <div className={classes["cart-count"]}>
+              <span>3</span>
+            </div>
+
+            <img src={cart} alt="" onClick={cartHandler} />
           </div>
-          <img src={cart} alt="" onClick={cartHandler} />
-        </div>
+        </Link>
         <Button>Login</Button>
       </div>
     </div>

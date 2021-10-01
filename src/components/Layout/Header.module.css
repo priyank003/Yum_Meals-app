@@ -9,7 +9,9 @@
 .hamMenu {
   display: none;
 }
-
+.brand h1 {
+  color: black;
+}
 .brand h1 span {
   color: #f54748;
 }
@@ -23,6 +25,11 @@
 }
 .icons {
   display: flex;
+}
+.icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .icons img {
   margin-left: 1.5rem;
@@ -40,7 +47,7 @@
 }
 .cart-count {
   position: absolute;
-  top: 5px;
+  top: -3px;
   left: 40px;
   background: #f54748;
   border-radius: 50%;
