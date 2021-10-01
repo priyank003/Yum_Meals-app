@@ -72,16 +72,29 @@
   margin-left: 2rem;
   flex: 0.75;
   display: flex;
+  flex-direction: column;
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
   height: 50vh;
   -webkit-overflow-scrolling: touch;
+
   padding: 2rem;
 }
-.menu-right::-webkit-scrollbar {
-  display: none;
+.meals-container {
+  margin-left: 2rem;
+  cursor: pointer;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px;
+
+  -webkit-overflow-scrolling: touch;
+
+  padding: 2rem;
 }
+
 .menu-meals {
   position: relative;
   display: flex;
@@ -244,5 +257,8 @@
   }
   .meal-price h2 {
     font-size: 1.4rem;
+  }
+  .meals-container::-webkit-scrollbar {
+    display: none;
   }
 }

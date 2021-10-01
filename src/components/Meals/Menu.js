@@ -285,6 +285,31 @@ const Menu = (props) => {
     props.cartItem(e);
   };
 
+  const mealsMenu = document.getElementById("meals-container");
+
+  function sideScroll(element, direction, speed, distance, step) {
+    let scrollAmount = 0;
+    var slideTimer = setInterval(function () {
+      if (direction == "left") {
+        element.scrollLeft -= step;
+      } else {
+        element.scrollLeft += step;
+      }
+
+      scrollAmount += step;
+      if (scrollAmount >= distance) {
+        window.clearInterval(slideTimer);
+      }
+    }, speed);
+  }
+
+  const leftScrollHandler = () => {
+    return sideScroll(mealsMenu, "left", 25, 100, 10);
+  };
+  const rightScrollHandler = () => {
+    return sideScroll(mealsMenu, "right", 25, 100, 10);
+  };
+
   return (
     <div className={classes.menu}>
       <div className={classes["menu-title"]}>OUR MENU</div>
@@ -309,35 +334,42 @@ const Menu = (props) => {
           })}
         </div>
         <div className={classes["menu-right"]} id="scroll">
-          {menu.map((data) => {
-            return data.name === menuMeal
-              ? data.type.map((meal) => {
-                  return (
-                    <div className={classes["menu-meals"]}>
-                      <img src={meal.img} alt="" />
-                      <div className={classes["meal-overlay"]}>
-                        <div className={classes["meal-form"]}>
-                          {" "}
-                          <div className={classes["meal-info"]}>
+          {/* <div className={classes["scroll-button"]}>
+            <button onClick={leftScrollHandler}>left</button>
+            <button onClick={rightScrollHandler}> right</button>
+          </div> */}
+
+          <div className={classes["meals-container"]} id="meals-container">
+            {menu.map((data) => {
+              return data.name === menuMeal
+                ? data.type.map((meal) => {
+                    return (
+                      <div className={classes["menu-meals"]} key={meal.id}>
+                        <img src={meal.img} alt="" />
+                        <div className={classes["meal-overlay"]}>
+                          <div className={classes["meal-form"]}>
                             {" "}
-                            <h3>{meal.name}</h3>
-                            <div className={classes["meal-price"]}>
-                              <span>$</span>
-                              <h2>{meal.price}</h2>
+                            <div className={classes["meal-info"]}>
+                              {" "}
+                              <h3>{meal.name}</h3>
+                              <div className={classes["meal-price"]}>
+                                <span>$</span>
+                                <h2>{meal.price}</h2>
+                              </div>
                             </div>
-                          </div>
-                          <div className={classes["meal-order"]}>
-                            <span onClick={() => orderHandler(meal)}>
-                              Order Now <b>{">"}</b>
-                            </span>
+                            <div className={classes["meal-order"]}>
+                              <span onClick={() => orderHandler(meal)}>
+                                Order Now <b>{">"}</b>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })
-              : "";
-          })}
+                    );
+                  })
+                : "";
+            })}
+          </div>
         </div>
       </div>
     </div>
