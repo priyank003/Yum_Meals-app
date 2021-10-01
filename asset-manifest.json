@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Yum_Meals-app/static/css/main.b8309501.chunk.css",
-    "main.js": "/Yum_Meals-app/static/js/main.25940cb2.chunk.js",
-    "main.js.map": "/Yum_Meals-app/static/js/main.25940cb2.chunk.js.map",
+    "main.js": "/Yum_Meals-app/static/js/main.92745ab7.chunk.js",
+    "main.js.map": "/Yum_Meals-app/static/js/main.92745ab7.chunk.js.map",
     "runtime-main.js": "/Yum_Meals-app/static/js/runtime-main.26921109.js",
     "runtime-main.js.map": "/Yum_Meals-app/static/js/runtime-main.26921109.js.map",
     "static/js/2.19af70fe.chunk.js": "/Yum_Meals-app/static/js/2.19af70fe.chunk.js",
@@ -69,6 +69,6 @@
     "static/js/runtime-main.26921109.js",
     "static/js/2.19af70fe.chunk.js",
     "static/css/main.b8309501.chunk.css",
-    "static/js/main.25940cb2.chunk.js"
+    "static/js/main.92745ab7.chunk.js"
   ]
 }
