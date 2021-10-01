@@ -28,7 +28,7 @@ const Header = (props) => {
       <div className={classes.hamMenu} onClick={clickHandler}>
         <img src={hamMenu} alt="" />
       </div>
-      <Link to="/">
+      <Link style={{ textDecoration: "none" }} to="/">
         <div className={classes.brand}>
           <h1>
             {" "}
