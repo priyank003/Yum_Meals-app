@@ -69,6 +69,7 @@
   width: 30px;
 }
 .menu-right {
+  margin-left: 2rem;
   flex: 0.75;
   display: flex;
   overflow: auto;
@@ -76,13 +77,21 @@
   padding: 10px;
   height: 50vh;
   -webkit-overflow-scrolling: touch;
+  padding: 2rem;
 }
-
+.menu-right::-webkit-scrollbar {
+  display: none;
+}
 .menu-meals {
   position: relative;
   display: flex;
   align-items: center;
-  margin-left: 15px;
+  margin-left: 2rem;
+  object-fit: contain;
+  transition: transform 450ms;
+}
+.menu-meals:hover {
+  transform: scale(1.08);
 }
 .meal-overlay {
   height: 100%;
