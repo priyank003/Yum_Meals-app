@@ -10,6 +10,7 @@ import flame from "../../assets/flame.png";
 import pizza from "../../assets/pizza.webp";
 import boy from "../../assets/boy.svg";
 import call from "../../assets/call.png";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -31,7 +32,9 @@ const Landing = () => {
           </p>
         </div>
         <div className={classes["landing-btns"]}>
-          <Button>Get Started</Button>
+          <Link to="/login">
+            <Button>Get Started</Button>
+          </Link>{" "}
         </div>
         <div className={classes["landing-customer"]}></div>
       </div>
