@@ -10,11 +10,9 @@ import { useState } from "react";
 import Cart from "./components/Cart/Cart";
 import { Switch, Route } from "react-router";
 import Login from "./components/auth/Login";
-import img from "./assets/menu/burger/beef-cotlet-burger-with-sauce-wooden-board.jpg";
+
 function App() {
   const [nav, setNav] = useState(null);
-
-  const [cart, showCart] = useState(false);
 
   const [cartItem, setCartItem] = useState([]);
   const clickHandler = (data) => {
@@ -27,12 +25,6 @@ function App() {
     }
   };
 
-  const cartHandler = (prev) => {
-    if (prev) {
-      showCart(true);
-    } else showCart(false);
-  };
-
   const addcartItems = (meal) => {
     setCartItem((prev) => {
       return [meal, ...prev];
@@ -43,11 +35,7 @@ function App() {
     <div className="App">
       <SideNav hamMenu={nav} />
 
-      <Header
-        hamClick={clickHandler}
-        onClick={hideHandler}
-        cartClick={cartHandler}
-      />
+      <Header hamClick={clickHandler} onClick={hideHandler} />
       <Switch>
         <Route path="/cart">
           <Cart cartItem={cartItem} />

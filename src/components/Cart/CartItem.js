@@ -1,7 +1,5 @@
 import classes from "./CartItem.module.css";
-import burger from "../../assets/menu/burger/beef-cotlet-burger-with-sauce-wooden-board.jpg";
-import pizza from "../../assets/menu/pizza/crispy-mixed-pizza-with-olives-sausage.jpg";
-import drinks from "../../assets/menu/drinks/bar-tender-pours-syrup-into-red-cocktail-glass.jpg";
+
 import Button from "../UI/Button";
 const CartItem = (props) => {
   return (

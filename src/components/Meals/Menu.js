@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classes from "../Meals/Menu.module.css";
 // icons
 import burger from "../../assets/menu/burger.svg";
@@ -286,27 +286,27 @@ const Menu = (props) => {
     props.cartItem(e);
   };
 
-  useEffect(() => {
-    const fetchMeals = async () => {
-      const response = await fetch(
-        "https://yum-meals-site-default-rtdb.firebaseio.com/meals.json"
-      );
-      const responseData = await response.json();
+  // useEffect(() => {
+  //   const fetchMeals = async () => {
+  //     const response = await fetch(
+  //       "https://yum-meals-site-default-rtdb.firebaseio.com/meals.json"
+  //     );
+  //     const responseData = await response.json();
 
-      // for (const key in responseData) {
-      //   // loadedMeals.push({
-      //   //   // type: responseData[key].type,
-      //   //   type: Object.values(responseData[key].type),
-      //   // });
+  //     // for (const key in responseData) {
+  //     //   // loadedMeals.push({
+  //     //   //   // type: responseData[key].type,
+  //     //   //   type: Object.values(responseData[key].type),
+  //     //   // });
 
-      //   console.log(key);
-      // }
+  //     //   console.log(key);
+  //     // }
 
-      // console.log(Object.values(responseData));
-    };
+  //     // console.log(Object.values(responseData));
+  //   };
 
-    return fetchMeals();
-  }, []);
+  //   return fetchMeals();
+  // }, []);
 
   return (
     <div className={classes.menu}>

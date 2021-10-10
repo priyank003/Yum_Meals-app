@@ -1,20 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import classes from "./Login.module.css";
 
 import { Link } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { authActions } from "../../store/auth-slice";
-import { useRef } from "react";
+
 import useInput from "../../hooks/use-input";
 const Login = () => {
-  const submitUserHandler = (userdata) => {
-    fetch("https://yum-meals-site-default-rtdb.firebaseio.com/user.json", {
-      method: "POST",
-      body: JSON.stringify({
-        user: userdata,
-      }),
-    });
-  };
+  // const submitUserHandler = (userdata) => {
+  //   fetch("https://yum-meals-site-default-rtdb.firebaseio.com/user.json", {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       user: userdata,
+  //     }),
+  //   });
+  // };
 
   const {
     value: enteredMail,
@@ -22,7 +20,7 @@ const Login = () => {
     hasEror: emailHasEror,
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
-    reset: emailReset,
+    // reset: emailReset,
   } = useInput((value) => value.trim().includes("@"));
   const {
     value: enteredPassword,
@@ -30,7 +28,7 @@ const Login = () => {
     hasEror: passwordHasEror,
     valueChangeHandler: passwordChangeHandler,
     inputBlurHandler: passwordBlurHandler,
-    reset: passwordReset,
+    // reset: passwordReset,
   } = useInput((value) => value.trim().length > 8);
 
   let btnIsValid = emailIsValid && passwordIsValid;

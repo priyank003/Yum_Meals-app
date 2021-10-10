@@ -1,10 +1,10 @@
 import classes from "./Cart.module.css";
-import burger from "../../assets/menu/burger/beef-cotlet-burger-with-sauce-wooden-board.jpg";
+
 import pizza from "../../assets/menu/pizza/crispy-mixed-pizza-with-olives-sausage.jpg";
-import drinks from "../../assets/menu/drinks/bar-tender-pours-syrup-into-red-cocktail-glass.jpg";
+
 import Button from "../UI/Button";
 import CartItem from "./CartItem";
-import { useState } from "react";
+
 const Cart = (props) => {
   return (
     <div className={classes.cart}>
