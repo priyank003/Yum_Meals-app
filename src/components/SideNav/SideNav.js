@@ -3,6 +3,7 @@ import Button from "../UI/Button";
 import fb from "../../assets/contact/fb.png";
 import watsapp from "../../assets/contact/watsapp.png";
 import tweet from "../../assets/contact/twitter.png";
+import { Link } from "react-router-dom";
 
 const SideNav = (props) => {
   return (
@@ -10,7 +11,9 @@ const SideNav = (props) => {
       {props.hamMenu && (
         <div className={classes.sideNav}>
           <div className={classes.login}>
-            <Button>Login</Button>
+            <Link to="/login">
+              <Button>Login</Button>
+            </Link>
             {}
             <span>or</span>
             <Button>Sign-up</Button>
@@ -18,8 +21,14 @@ const SideNav = (props) => {
           <div className={classes["sideNav-links"]}>
             <div className={classes["nav-links"]}>
               <a href="/why">Why Yum Meals ?</a>
-              <a href="/services">Services</a>
-              <a href="/menu">Menu</a>
+              <Link to="/">
+                <a href="/services">Services</a>
+              </Link>
+
+              <Link to="/menu">
+                <a href="/menu">Menu</a>
+              </Link>
+
               <a href="/contact">Locate Store</a>
             </div>
 
