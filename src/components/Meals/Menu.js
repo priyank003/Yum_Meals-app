@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "../Meals/Menu.module.css";
 // icons
 import burger from "../../assets/menu/burger.svg";
@@ -63,7 +63,7 @@ const Menu = (props) => {
   const menu = [
     {
       id: "0",
-      name: "Burger",
+      name: "burger",
       icon: burger,
       type: [
         {
@@ -275,7 +275,8 @@ const Menu = (props) => {
     },
   ];
 
-  const [menuMeal, setShowmenuMeal] = useState("Burger");
+  const [menuMeal, setShowmenuMeal] = useState("burger");
+  // const [loadedMeals, setLoadedMeals] = useState([]);
 
   const clickHandler = (e) => {
     setShowmenuMeal(e.target.outerText);
@@ -285,30 +286,27 @@ const Menu = (props) => {
     props.cartItem(e);
   };
 
-  const mealsMenu = document.getElementById("meals-container");
+  useEffect(() => {
+    const fetchMeals = async () => {
+      const response = await fetch(
+        "https://yum-meals-site-default-rtdb.firebaseio.com/meals.json"
+      );
+      const responseData = await response.json();
 
-  function sideScroll(element, direction, speed, distance, step) {
-    let scrollAmount = 0;
-    var slideTimer = setInterval(function () {
-      if (direction == "left") {
-        element.scrollLeft -= step;
-      } else {
-        element.scrollLeft += step;
-      }
+      // for (const key in responseData) {
+      //   // loadedMeals.push({
+      //   //   // type: responseData[key].type,
+      //   //   type: Object.values(responseData[key].type),
+      //   // });
 
-      scrollAmount += step;
-      if (scrollAmount >= distance) {
-        window.clearInterval(slideTimer);
-      }
-    }, speed);
-  }
+      //   console.log(key);
+      // }
 
-  const leftScrollHandler = () => {
-    return sideScroll(mealsMenu, "left", 25, 100, 10);
-  };
-  const rightScrollHandler = () => {
-    return sideScroll(mealsMenu, "right", 25, 100, 10);
-  };
+      // console.log(Object.values(responseData));
+    };
+
+    return fetchMeals();
+  }, []);
 
   return (
     <div className={classes.menu}>
@@ -334,11 +332,6 @@ const Menu = (props) => {
           })}
         </div>
         <div className={classes["menu-right"]} id="scroll">
-          {/* <div className={classes["scroll-button"]}>
-            <button onClick={leftScrollHandler}>left</button>
-            <button onClick={rightScrollHandler}> right</button>
-          </div> */}
-
           <div className={classes["meals-container"]} id="meals-container">
             {menu.map((data) => {
               return data.name === menuMeal
