@@ -4,10 +4,10 @@ import fb from "../../assets/contact/fb.png";
 import watsapp from "../../assets/contact/watsapp.png";
 import tweet from "../../assets/contact/twitter.png";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 import { sideNavActions } from "../../store/sideNav-slice";
 import { useDispatch, useSelector } from "react-redux";
-const SideNav = (props) => {
+const SideNav = () => {
   const dispatch = useDispatch();
 
   const sideNavHandler = useSelector((state) => state.sideNav.show);

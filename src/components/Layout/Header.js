@@ -4,13 +4,13 @@ import cart from "./../../assets/UI/shopping_cart_black_24dp.svg";
 import Button from "../UI/Button";
 import hamMenu from "../../assets/UI/menu_black_24dp.svg";
 import React, { useState } from "react";
-import Cart from "../Cart/Cart";
+
 import { Link } from "react-router-dom";
 import { sideNavActions } from "../../store/sideNav-slice";
 import { useDispatch } from "react-redux";
 const Header = (props) => {
   const dispatch = useDispatch();
-  const [sideNav, setsideNav] = useState(false);
+
   const [showCart, setShowCart] = useState(false);
   const hamMenuClickHandler = () => {
     dispatch(sideNavActions.showSideNav());
