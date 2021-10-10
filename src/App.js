@@ -9,7 +9,7 @@ import SideNav from "./components/SideNav/SideNav";
 import { useState } from "react";
 import Cart from "./components/Cart/Cart";
 import { Switch, Route } from "react-router";
-
+import Login from "./components/auth/Login";
 import img from "./assets/menu/burger/beef-cotlet-burger-with-sauce-wooden-board.jpg";
 function App() {
   const [nav, setNav] = useState(null);
@@ -55,6 +55,10 @@ function App() {
         <Route path="/menu">
           <Menu cartItem={addcartItems} />
         </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+
         <Route path="/">
           <Landing />
           <Services />
