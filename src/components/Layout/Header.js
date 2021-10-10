@@ -6,14 +6,14 @@ import hamMenu from "../../assets/UI/menu_black_24dp.svg";
 import React, { useState } from "react";
 import Cart from "../Cart/Cart";
 import { Link } from "react-router-dom";
-
+import { sideNavActions } from "../../store/sideNav-slice";
+import { useDispatch } from "react-redux";
 const Header = (props) => {
+  const dispatch = useDispatch();
   const [sideNav, setsideNav] = useState(false);
   const [showCart, setShowCart] = useState(false);
-  const clickHandler = () => {
-    setsideNav((prev) => !prev);
-
-    props.hamClick(sideNav);
+  const hamMenuClickHandler = () => {
+    dispatch(sideNavActions.showSideNav());
   };
 
   const cartHandler = () => {
@@ -25,7 +25,7 @@ const Header = (props) => {
   return (
     <div className={classes.header}>
       {console.log(showCart)}
-      <div className={classes.hamMenu} onClick={clickHandler}>
+      <div className={classes.hamMenu} onClick={hamMenuClickHandler}>
         <img src={hamMenu} alt="" />
       </div>
       <Link style={{ textDecoration: "none" }} to="/">
