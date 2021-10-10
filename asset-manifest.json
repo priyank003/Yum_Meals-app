@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Yum_Meals-app/static/css/main.eb93d260.chunk.css",
-    "main.js": "/Yum_Meals-app/static/js/main.07df93d0.chunk.js",
-    "main.js.map": "/Yum_Meals-app/static/js/main.07df93d0.chunk.js.map",
-    "runtime-main.js": "/Yum_Meals-app/static/js/runtime-main.880445b8.js",
-    "runtime-main.js.map": "/Yum_Meals-app/static/js/runtime-main.880445b8.js.map",
-    "static/js/2.124e1642.chunk.js": "/Yum_Meals-app/static/js/2.124e1642.chunk.js",
-    "static/js/2.124e1642.chunk.js.map": "/Yum_Meals-app/static/js/2.124e1642.chunk.js.map",
-    "static/js/3.a2f8f986.chunk.js": "/Yum_Meals-app/static/js/3.a2f8f986.chunk.js",
-    "static/js/3.a2f8f986.chunk.js.map": "/Yum_Meals-app/static/js/3.a2f8f986.chunk.js.map",
+    "main.js": "/Yum_Meals-app/static/js/main.503aab2c.chunk.js",
+    "main.js.map": "/Yum_Meals-app/static/js/main.503aab2c.chunk.js.map",
+    "runtime-main.js": "/Yum_Meals-app/static/js/runtime-main.b2360fbe.js",
+    "runtime-main.js.map": "/Yum_Meals-app/static/js/runtime-main.b2360fbe.js.map",
+    "static/js/2.a21a9181.chunk.js": "/Yum_Meals-app/static/js/2.a21a9181.chunk.js",
+    "static/js/2.a21a9181.chunk.js.map": "/Yum_Meals-app/static/js/2.a21a9181.chunk.js.map",
+    "static/js/3.0982e733.chunk.js": "/Yum_Meals-app/static/js/3.0982e733.chunk.js",
+    "static/js/3.0982e733.chunk.js.map": "/Yum_Meals-app/static/js/3.0982e733.chunk.js.map",
     "index.html": "/Yum_Meals-app/index.html",
     "static/css/main.eb93d260.chunk.css.map": "/Yum_Meals-app/static/css/main.eb93d260.chunk.css.map",
-    "static/js/2.124e1642.chunk.js.LICENSE.txt": "/Yum_Meals-app/static/js/2.124e1642.chunk.js.LICENSE.txt",
+    "static/js/2.a21a9181.chunk.js.LICENSE.txt": "/Yum_Meals-app/static/js/2.a21a9181.chunk.js.LICENSE.txt",
     "static/media/0e6247448805e6cab8b9a3e2d2755168.229935cb.jpg": "/Yum_Meals-app/static/media/0e6247448805e6cab8b9a3e2d2755168.229935cb.jpg",
     "static/media/BeFunky.d4dbbec0.jpg": "/Yum_Meals-app/static/media/BeFunky.d4dbbec0.jpg",
     "static/media/Chakna.c1509895.jpg": "/Yum_Meals-app/static/media/Chakna.c1509895.jpg",
@@ -66,9 +66,9 @@
     "static/media/wednesday-special-deal.a9f78a15.png": "/Yum_Meals-app/static/media/wednesday-special-deal.a9f78a15.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.880445b8.js",
-    "static/js/2.124e1642.chunk.js",
+    "static/js/runtime-main.b2360fbe.js",
+    "static/js/2.a21a9181.chunk.js",
     "static/css/main.eb93d260.chunk.css",
-    "static/js/main.07df93d0.chunk.js"
+    "static/js/main.503aab2c.chunk.js"
   ]
 }
