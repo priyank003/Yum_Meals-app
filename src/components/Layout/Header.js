@@ -53,7 +53,9 @@ const Header = (props) => {
             <img src={cart} alt="" onClick={cartHandler} />
           </div>
         </Link>
-        <Button>Login</Button>
+        <Link to="/login">
+          <Button className={classes["login-btn"]}>Login</Button>
+        </Link>
       </div>
     </div>
   );
