@@ -4,12 +4,29 @@ import pizza from "../../assets/menu/pizza/crispy-mixed-pizza-with-olives-sausag
 
 import Button from "../UI/Button";
 import CartItem from "./CartItem";
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
-const Cart = (props) => {
+const Cart = () => {
+  const cart = useSelector((state) => {
+    return {
+      cartItems: state.cart.cartItems,
+      qty: state.cart.quantity,
+    };
+  });
+
+  const [price, setPrice] = useState(0);
+
+  useEffect(() => {
+    cart.cartItems.map((data) => {
+      return setPrice((prev) => Math.round(prev + data.price));
+    });
+  }, [cart.cartItems]);
+
   return (
     <div className={classes.cart}>
       <div className={classes["cart-left"]}>
-        {props.cartItem.map((data) => {
+        {cart.cartItems.map((data) => {
           return <CartItem meal={data} />;
         })}
       </div>
@@ -17,11 +34,11 @@ const Cart = (props) => {
         <div className={classes["checkout-form"]}>
           <div className={classes["total-items"]}>
             <h1>Subtotal : </h1>
-            <span> 5 items</span>
+            <span>{cart.qty} items</span>
           </div>
           <div className={classes["total-items"]}>
             <h1>Total Price :</h1>
-            <span> 59.96 $</span>
+            <span> {price} $</span>
           </div>
 
           <div className={classes["checkout-btn"]}>
