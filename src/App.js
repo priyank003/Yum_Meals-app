@@ -10,15 +10,8 @@ import SideNav from "./components/SideNav/SideNav";
 import Cart from "./components/Cart/Cart";
 import { Switch, Route } from "react-router";
 import Login from "./components/auth/Login";
-import { useDispatch } from "react-redux";
-import { cartSliceActions } from "./store/cartItem-slice";
 
 function App() {
-  const dispatch = useDispatch();
-  const addcartItems = (meal) => {
-    dispatch(cartSliceActions.addToCart(meal));
-  };
-
   return (
     <div className="App">
       <SideNav />
@@ -29,7 +22,7 @@ function App() {
           <Cart />
         </Route>
         <Route path="/menu">
-          <Menu cartItem={addcartItems} />
+          <Menu />
         </Route>
         <Route path="/login">
           <Login />
