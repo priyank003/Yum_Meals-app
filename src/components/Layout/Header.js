@@ -7,13 +7,16 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { sideNavActions } from "../../store/sideNav-slice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
 const Header = () => {
   const dispatch = useDispatch();
 
   const hamMenuClickHandler = () => {
     dispatch(sideNavActions.showSideNav());
   };
+
+  const cartQty = useSelector((state) => state.cart.quantity);
 
   return (
     <div className={classes.header}>
@@ -31,17 +34,19 @@ const Header = () => {
       <div className={classes.links}>
         <a href="/why">Why Yum Meals ?</a>
         <a href="/services">Services</a>
-        <a href="/menu">Menu</a>
-        <a href="/contact">Contact</a>
+        <Link to="/menu">Menu</Link> <a href="/contact">Contact</a>
       </div>
       <div className={classes.icons}>
         <img src={SearchIcon} className={classes.searchIcon} alt="" />
         <Link to="/cart">
           <div className={classes["header-cart"]}>
-            <div className={classes["cart-count"]}>
-              <span>3</span>
-            </div>
-
+            {cartQty ? (
+              <div className={classes["cart-count"]}>
+                <span>{cartQty}</span>
+              </div>
+            ) : (
+              ""
+            )}
             <img src={cart} alt="" />
           </div>
         </Link>
