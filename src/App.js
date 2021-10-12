@@ -6,39 +6,27 @@ import Services from "./components/Layout/Services";
 import Menu from "./components/Meals/Menu";
 import Footer from "./components/Layout/Footer";
 import SideNav from "./components/SideNav/SideNav";
-import { useState } from "react";
+
 import Cart from "./components/Cart/Cart";
 import { Switch, Route } from "react-router";
 import Login from "./components/auth/Login";
+import { useDispatch } from "react-redux";
+import { cartSliceActions } from "./store/cartItem-slice";
 
 function App() {
-  const [nav, setNav] = useState(null);
-
-  const [cartItem, setCartItem] = useState([]);
-  const clickHandler = (data) => {
-    setNav(data);
-  };
-
-  const hideHandler = (show) => {
-    if (show) {
-      setNav(false);
-    }
-  };
-
+  const dispatch = useDispatch();
   const addcartItems = (meal) => {
-    setCartItem((prev) => {
-      return [meal, ...prev];
-    });
+    dispatch(cartSliceActions.addToCart(meal));
   };
 
   return (
     <div className="App">
-      <SideNav hamMenu={nav} />
+      <SideNav />
 
-      <Header hamClick={clickHandler} onClick={hideHandler} />
+      <Header />
       <Switch>
         <Route path="/cart">
-          <Cart cartItem={cartItem} />
+          <Cart />
         </Route>
         <Route path="/menu">
           <Menu cartItem={addcartItems} />
